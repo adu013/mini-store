@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  height: 40px;
+}
+.nav-logo p {
+  color: #171717;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-login {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-login button {
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-weight: 600;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login button:active {
+  background: #131313;
+  color: white;
+}
