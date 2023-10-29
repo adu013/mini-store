@@ -13,8 +13,6 @@ const LoginSignup = () => {
     const [action] = useState("Login");
 
     const login = () => {
-        console.log(email);
-        console.log(password);
 
         axios({
             method: 'post',
@@ -37,11 +35,10 @@ const LoginSignup = () => {
                 console.log(error);
             })
     }
-    // const navigate = useNavigate();
+
     useEffect(() => {
         if (localStorage.getItem('user-token')) {
             console.log(localStorage.getItem('user-token'));
-            // navigate("/add");
         }
     })
     return (
