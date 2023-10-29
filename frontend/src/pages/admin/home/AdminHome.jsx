@@ -1,27 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './AdminHome.css';
-import products from '../../../assets/products';
+import no_image_img from '../../../assets/no-image.jpg';
+// import products from '../../../assets/products';
 import Product from "../../../components/product/Product";
 import axios from "axios";
 
 const AdminHome = () => {
 
-    const [prods, setProds] = useState([]);
-    const fetchProds = () => {
+    const token = "Token " + localStorage.getItem("token");
+    const [products, setProducts] = useState([]);
+    const fetchProducts = () => {
         axios({
             method: "get",
-            url: "http://localhost:8000/api/stores/products/"
+            url: "http://localhost:8000/api/stores/products/",
+            headers: {
+                Accept: 'application/json',
+                Authorization: token
+            }
         })
             .then((response) => {
-                console.log(response);
+                console.log(response.data);
+                setProducts(response.data);
             }, (error) => {
                 console.log(error);
             })
     };
 
     useEffect(() => {
-        fetchProds();
+        fetchProducts();
     }, []);
 
     return (
@@ -34,14 +41,20 @@ const AdminHome = () => {
                 </div>
                 <div className="product">
                     {products.map((item, i) => {
-                        return <Product
-                            key={i}
-                            id={item.id}
-                            productName={item.productName}
-                            productDescription={item.productDescription}
-                            productImage={item.image}
-                            productPrice={item.productPrice}
-                        />
+                        return (
+                            <div>
+                                <Link to={`/admin/product/${item.id}`}>
+                                    <Product
+                                        key={i}
+                                        id={item.id}
+                                        productName={item.name}
+                                        productDescription={item.description}
+                                        productImage={no_image_img}
+                                        productPrice={item.price}
+                                    />
+                                </Link>
+                            </div>
+                        )
                     })}
                 </div>
             </div>

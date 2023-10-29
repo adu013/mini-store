@@ -4,3 +4,8 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+.section-product-detail img {
+    width: 250px;
+    height: 250px;
+}

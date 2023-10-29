@@ -3,13 +3,14 @@ import iced_tea_img from './lipton-iced-tea.png';
 import milk_img from './milk.png';
 import bread_img from './sliced-bread.png';
 import tender_coco_img from './tender-coco-water.png';
+import no_image_img from './no-image.jpg';
 
 let products = [
     {
         id: 1,
         productName: "Biscuit",
         productDescription: "This is Biscuit",
-        image: biscuit_img,
+        image: no_image_img,
         productPrice: 1.20
     },
     {

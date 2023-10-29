@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Dialog from "../../../components/dialog/Dialog";
+import no_image_img from '../../../assets/no-image.jpg';
 
 const AdminProductDetailPage = () => {
 
@@ -78,10 +79,12 @@ const AdminProductDetailPage = () => {
     return (
         <div>{ product ? <div>
             <p>Detail</p>
-            <img src="" alt="" />
-            <p>{product.name}</p>
-            <p>{product.description}</p>
-            <p>S${product.price}</p>
+            <div className="section-product-detail">
+                <img src={no_image_img} alt="" />
+                <p>{product.name}</p>
+                <p>{product.description}</p>
+                <p>S${product.price}</p>
+            </div>
             <div>
                 <div className="btn-update">
                     <Link to={`/admin/product/${id}/update`}>
