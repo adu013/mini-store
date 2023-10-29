@@ -1,0 +1,3 @@
+- [ ] Create 'user-info' API (BE)
+- [ ] Consume 'user-info' API (FE)
+- [ ] Seperate Normal User & Staff User View (FE)
