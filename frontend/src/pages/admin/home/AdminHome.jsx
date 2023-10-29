@@ -49,7 +49,7 @@ const AdminHome = () => {
                                         id={item.id}
                                         productName={item.name}
                                         productDescription={item.description}
-                                        productImage={no_image_img}
+                                        productImage={item.img}
                                         productPrice={item.price}
                                     />
                                 </Link>

@@ -17,6 +17,7 @@ const AdminProductDetailPage = () => {
         message: '',
         isLoading: false
     });
+    const [imgUrl, setImgUrl] = useState();
 
     // const handleDialog = (message, isLoading) => {
     //     setDialog({
@@ -58,7 +59,6 @@ const AdminProductDetailPage = () => {
     }
 
     useEffect(() => {
-        console.log('useEffect');
         const url = "http://localhost:8000/api/stores/products/" + id;
         axios({
             method: "get",
@@ -71,6 +71,9 @@ const AdminProductDetailPage = () => {
             .then((response) => {
                 console.log(response);
                 setProduct(response.data);
+                // this is crappy
+                const url = response.data["img"]
+                url ? setImgUrl(url.replace("minio:9000", "localhost:9000")) : setImgUrl("")
             }, (error) => {
                 console.log(error);
             });
@@ -80,7 +83,7 @@ const AdminProductDetailPage = () => {
         <div>{ product ? <div>
             <p>Detail</p>
             <div className="section-product-detail">
-                <img src={no_image_img} alt="" />
+                <img src={imgUrl} alt="" />
                 <p>{product.name}</p>
                 <p>{product.description}</p>
                 <p>S${product.price}</p>

@@ -40,6 +40,19 @@ CORS_ALLOW_METHODS = [
     'PUT',
 ]
 
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'type',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 # Application definition
 
 CORE_APPS = [
@@ -167,12 +180,14 @@ MEDIA_URL = '/media/'
 # STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 STATICFILES_DIR = [BASE_DIR / 'static',]
 
+AWS_ACCESS_KEY_ID = os.environ['MINIO_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['MINIO_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.environ['MINIO_STORAGE_BUCKET_NAME']
+# AWS_S3_ENDPOINT_URL = os.environ['MINIO_API']
+AWS_S3_USE_SSL = False
+
 if DEBUG:
-    AWS_ACCESS_KEY_ID = os.environ['MINIO_ACCESS_KEY_ID']
-    AWS_SECRET_ACCESS_KEY = os.environ['MINIO_SECRET_ACCESS_KEY']
-    AWS_STORAGE_BUCKET_NAME = os.environ['MINIO_STORAGE_BUCKET_NAME']
-    AWS_S3_ENDPOINT_URL = os.environ['MINIO_API']
-    AWS_S3_USE_SSL = False
+    AWS_S3_ENDPOINT_URL = "http://minio:9000"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
