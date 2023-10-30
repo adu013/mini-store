@@ -1,0 +1,47 @@
+[
+  {
+    "model": "stores.Product",
+    "pk": 1,
+    "fields": {
+      "name": "Biscuit",
+      "description": "Butter & Casheew Biscuit from Malaysia",
+      "price": 1.20
+    }
+  },
+  {
+    "model": "stores.Product",
+    "pk": 2,
+    "fields": {
+      "name": "Bread",
+      "description": "Fresh Sliced Bread",
+      "price": 1.60
+    }
+  },
+  {
+    "model": "stores.Product",
+    "pk": 3,
+    "fields": {
+      "name": "Milk",
+      "description": "Fresh Australian Milk",
+      "price": 3.45
+    }
+  },
+  {
+    "model": "stores.Product",
+    "pk": 4,
+    "fields": {
+      "name": "Rice",
+      "description": "Indian Basmati Rice 5kg",
+      "price": 7.20
+    }
+  },
+  {
+    "model": "stores.Product",
+    "pk": 5,
+    "fields": {
+      "name": "Tea",
+      "description": "Twinings Earl Grey Tea",
+      "price": 11.90
+    }
+  }
+]
