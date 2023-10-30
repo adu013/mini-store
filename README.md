@@ -14,8 +14,9 @@ This project uses Celery (with Redis as message broker) as task queue.
 2. Build the docker images: `docker-compose build`
 3. Run the containers: `docker-compose up -d`
 4. (For 1st time) Create a superuser: `docker-compose exec django python manage.py createsuperuser`
-4. Open Browser and goto: `http://localhost:3000`
-5. Shut down docker containers: `docker-compose down`
+5. (For 1st time) Run fixture: `docker-compose exec django python manage.py loaddate productdata`
+6. Open Browser and goto: `http://localhost:3000`
+7. Shut down docker containers: `docker-compose down`
 
 
 ## Additional commands

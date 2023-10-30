@@ -1,3 +1,4 @@
 - [ ] Create 'user-info' API (BE)
 - [ ] Consume 'user-info' API (FE)
-- [ ] Seperate Normal User & Staff User View (FE)
+- [ ] Separate Normal User & Staff User View (FE)
+- [ ] Update Fixture (product data) with images
