@@ -1,8 +1,17 @@
+.btn-confirm-update button{
+    background: navy;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+}
+
 .btn-delete button {
     background: red;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 .section-product-detail img {

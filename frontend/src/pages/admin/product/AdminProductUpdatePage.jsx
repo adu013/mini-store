@@ -71,13 +71,13 @@ const AdminProductUpdatePage = () => {
     }, []);
 
     return (
-        <div>
+        <div className="update-product-container">
             { product ? <div>
-                <p>Detail</p>
+                <h3>Update details of product: {product.name}</h3>
                 <img src="" alt="" />
-                <p>{product.name}</p>
                 <form onSubmit={(event) => handleSubmit(event)}>
                     <div>
+                    <div className="input">
                         Description:
                         <input
                             onChange={(event) => handleChange(event)}
@@ -86,7 +86,7 @@ const AdminProductUpdatePage = () => {
                             value={data.description}
                         />
                     </div>
-                    <div>
+                    <div className="input">
                         Price: S$
                         <input
                             onChange={(event) => handleChange(event)}
@@ -98,8 +98,9 @@ const AdminProductUpdatePage = () => {
                             value={data.price}
                         />
                     </div>
+                    </div>
 
-                    <div className="btn-confirm-update">
+                    <div className="section-submit">
                         <button className="btn-submit">Confirm Update</button>
                     </div>
                 </form>

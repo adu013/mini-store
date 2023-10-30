@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
+import './AdminProductAddPage.css';
 
 const AdminProductAddPage = () => {
     const navigate = useNavigate()
@@ -50,10 +51,11 @@ const AdminProductAddPage = () => {
 
     }
     return (
-        <>
+        <div className="add-product-container">
             <h2>Add a new product</h2>
             <form onSubmit={(event) => handleSubmit(event)}>
-                <div>
+                <div className="inputs">
+                <div className="input">
                     <input
                         onChange={(event) => handleChange(event)}
                         id="name"
@@ -62,7 +64,7 @@ const AdminProductAddPage = () => {
                         type="text"
                     />
                 </div>
-            <div>
+            <div className="input">
                 <input
                     onChange={(event) => handleChange(event)}
                     id="description"
@@ -71,7 +73,7 @@ const AdminProductAddPage = () => {
                     type="text"
                 />
             </div>
-            <div>
+            <div className="input">
                 <input
                     onChange={(event) => handleChange(event)}
                     id="price"
@@ -83,20 +85,23 @@ const AdminProductAddPage = () => {
                     step="0.01"
                 />
             </div>
-            <div>
+            <div className="file-input">
                 <input
                     onChange={(event) => handleFileUpload(event)}
                     id="img"
                     type="file"
                 />
             </div>
-            <div>
+            </div>
+            <div className="section-submit">
                 <button className="btn-submit">Submit</button>
             </div>
             </form>
 
-            <div>Back to Admin Home</div>
-        </>
+            <div className="section-cancel">
+                <Link to="/admin">Cancel</Link>
+            </div>
+        </div>
     )
 }
 
