@@ -5,7 +5,9 @@
     "fields": {
       "name": "Biscuit",
       "description": "Butter & Casheew Biscuit from Malaysia",
-      "price": 1.20
+      "price": 1.20,
+      "created_on": "2022-03-16T17:41:28+00:00",
+      "updated_on": "2022-03-16T17:41:28+00:00"
     }
   },
   {
@@ -14,7 +16,9 @@
     "fields": {
       "name": "Bread",
       "description": "Fresh Sliced Bread",
-      "price": 1.60
+      "price": 1.60,
+      "created_on": "2022-03-16T17:41:28+00:00",
+      "updated_on": "2022-03-16T17:41:28+00:00"
     }
   },
   {
@@ -23,7 +27,9 @@
     "fields": {
       "name": "Milk",
       "description": "Fresh Australian Milk",
-      "price": 3.45
+      "price": 3.45,
+      "created_on": "2022-03-16T17:41:28+00:00",
+      "updated_on": "2022-03-16T17:41:28+00:00"
     }
   },
   {
@@ -32,7 +38,9 @@
     "fields": {
       "name": "Rice",
       "description": "Indian Basmati Rice 5kg",
-      "price": 7.20
+      "price": 7.20,
+      "created_on": "2022-03-16T17:41:28+00:00",
+      "updated_on": "2022-03-16T17:41:28+00:00"
     }
   },
   {
@@ -41,7 +49,9 @@
     "fields": {
       "name": "Tea",
       "description": "Twinings Earl Grey Tea",
-      "price": 11.90
+      "price": 11.90,
+      "created_on": "2022-03-16T17:41:28+00:00",
+      "updated_on": "2022-03-16T17:41:28+00:00"
     }
   }
 ]
