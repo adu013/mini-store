@@ -16,8 +16,23 @@ services:
       - ./.env.dev
     depends_on:
       - db
+      - redis
       - minio
       - create_buckets
+
+  celery:
+    build: ./app
+    command: celery -A mini_project worker -l INFO
+    volumes:
+      - ./app/:/usr/src/app/
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - django
+      - redis
+
+  redis:
+    image: "redis:alpine"
 
   db:
     image: postgres:16
@@ -27,6 +42,7 @@ services:
       - POSTGRES_USER=mini_project_user
       - POSTGRES_PASSWORD=mini_project_pwd
       - POSTGRES_DB=mini_project_db
+
 
   minio:
     image: minio/minio:latest

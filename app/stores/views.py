@@ -5,7 +5,7 @@ from rest_framework.authentication import (
     SessionAuthentication,
     TokenAuthentication
 )
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 
 from .models import Product
@@ -18,7 +18,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     creating, updating, deleting Products
     """
     authentication_classes = [SessionAuthentication, TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser,]
 
     serializer_class = ProductSerializer
     queryset = Product.objects.all().order_by('name')

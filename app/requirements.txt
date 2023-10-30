@@ -3,9 +3,11 @@ asgiref==3.7.2
 asttokens==2.4.1
 backcall==0.2.0
 boto3==1.28.72
+celery==5.3.4
 decorator==5.1.1
 Django==4.2.6
 django-cors-headers==4.3.0
+django-redis==5.4.0
 django-rest-framework==0.1.0
 django-s3direct==2.0.3
 django-storages==1.14.2
@@ -27,6 +29,7 @@ pure-eval==0.2.2
 Pygments==2.16.1
 pyscopg2==66.0.2
 pytz==2023.3.post1
+redis==4.6.0
 six==1.16.0
 sqlparse==0.4.4
 stack-data==0.6.3
